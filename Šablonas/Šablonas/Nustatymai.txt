@@ -1,2 +1,12 @@
 Rezultatai Rezultatai.txt
-Duomenys debils
+Duomenys Duomenys.txt
+
+
+
+
+
+
+
+
+
+

@@ -27,6 +27,9 @@
     <ClCompile Include="GUIEssentials.cpp">
       <Filter>GUIEssentials</Filter>
     </ClCompile>
+    <ClCompile Include="txtEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyProgram.h">
@@ -34,6 +37,9 @@
     </ClInclude>
     <ClInclude Include="GUIEssentials.h">
       <Filter>GUIEssentials</Filter>
+    </ClInclude>
+    <ClInclude Include="txtEditor.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -43,5 +49,10 @@
     <Text Include="ReadMe.txt">
       <Filter>Resource Files</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MyProgram.resx">
+      <Filter>Resource Files</Filter>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

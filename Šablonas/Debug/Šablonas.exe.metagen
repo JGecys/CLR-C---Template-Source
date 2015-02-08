@@ -1,4 +1,5 @@
   Šablonas.MyProgram.resources - Embedded, ContainedInManifestFile, 
+  Šablonas.txtEditor.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly Šablonas, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
 	hash=SHA1, flags=PublicKey
@@ -34,6 +35,9 @@ Class GUIEssentials.MessageShow: AutoLayout, AnsiClass, Class, Public, BeforeFie
     Show(String, String): PrivateScope, Public, Static, HideBySig
     Show(String): PrivateScope, Public, Static, HideBySig
     Show(String, String, MessageBoxButtons, MessageBoxIcon): PrivateScope, Public, Static, HideBySig
+Class Pagrindinis.txtEditor: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(std.basic_string<char\,std::char_traits<char>\,std::allocator<char> >*, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class Pagrindinis.PagrindineForma: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

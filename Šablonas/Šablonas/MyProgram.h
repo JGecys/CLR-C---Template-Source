@@ -1,6 +1,7 @@
 #pragma once
 
 #include "GUIEssentials.h"
+#include "txtEditor.h"
 
 namespace Pagrindinis {
 
@@ -65,6 +66,8 @@ namespace Pagrindinis {
 	private: System::Windows::Forms::Button^  buttonNuskaityti;
 	private: System::Windows::Forms::GroupBox^  groupSkaiciavimai;
 	private: System::Windows::Forms::GroupBox^  groupRezultatai;
+	private: System::Windows::Forms::Button^  buttonEdit;
+	private: System::Windows::Forms::Button^  buttonPreview;
 
 
 	private: System::ComponentModel::IContainer^  components;
@@ -82,15 +85,19 @@ namespace Pagrindinis {
 			this->buttonNuskaityti = (gcnew System::Windows::Forms::Button());
 			this->groupSkaiciavimai = (gcnew System::Windows::Forms::GroupBox());
 			this->groupRezultatai = (gcnew System::Windows::Forms::GroupBox());
+			this->buttonEdit = (gcnew System::Windows::Forms::Button());
+			this->buttonPreview = (gcnew System::Windows::Forms::Button());
 			this->groupDuomenys->SuspendLayout();
 			this->groupRezultatai->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// buttonSpausdinti
 			// 
+			this->buttonSpausdinti->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
 			this->buttonSpausdinti->Location = System::Drawing::Point(8, 45);
 			this->buttonSpausdinti->Name = L"buttonSpausdinti";
-			this->buttonSpausdinti->Size = System::Drawing::Size(113, 23);
+			this->buttonSpausdinti->Size = System::Drawing::Size(142, 23);
 			this->buttonSpausdinti->TabIndex = 3;
 			this->buttonSpausdinti->Text = L"Spausdinti";
 			this->buttonSpausdinti->UseVisualStyleBackColor = true;
@@ -99,7 +106,7 @@ namespace Pagrindinis {
 			// 
 			this->textRezultatuFailas->Location = System::Drawing::Point(8, 19);
 			this->textRezultatuFailas->Name = L"textRezultatuFailas";
-			this->textRezultatuFailas->Size = System::Drawing::Size(230, 20);
+			this->textRezultatuFailas->Size = System::Drawing::Size(249, 20);
 			this->textRezultatuFailas->TabIndex = 4;
 			this->textRezultatuFailas->Leave += gcnew System::EventHandler(this, &PagrindineForma::OnRezultatuFailasLeave);
 			// 
@@ -107,6 +114,7 @@ namespace Pagrindinis {
 			// 
 			this->groupDuomenys->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
+			this->groupDuomenys->Controls->Add(this->buttonEdit);
 			this->groupDuomenys->Controls->Add(this->textDuomenuFailas);
 			this->groupDuomenys->Controls->Add(this->buttonNuskaityti);
 			this->groupDuomenys->Location = System::Drawing::Point(12, 12);
@@ -121,19 +129,21 @@ namespace Pagrindinis {
 			this->textDuomenuFailas->Location = System::Drawing::Point(9, 19);
 			this->textDuomenuFailas->Name = L"textDuomenuFailas";
 			this->textDuomenuFailas->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->textDuomenuFailas->Size = System::Drawing::Size(230, 20);
+			this->textDuomenuFailas->Size = System::Drawing::Size(248, 20);
 			this->textDuomenuFailas->TabIndex = 1;
 			this->textDuomenuFailas->Leave += gcnew System::EventHandler(this, &PagrindineForma::OnTextDuomenuFailasLeave);
 			// 
 			// buttonNuskaityti
 			// 
+			this->buttonNuskaityti->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
 			this->buttonNuskaityti->Location = System::Drawing::Point(9, 44);
 			this->buttonNuskaityti->Name = L"buttonNuskaityti";
-			this->buttonNuskaityti->Size = System::Drawing::Size(113, 23);
+			this->buttonNuskaityti->Size = System::Drawing::Size(141, 23);
 			this->buttonNuskaityti->TabIndex = 0;
 			this->buttonNuskaityti->Text = L"Nuskaityti";
 			this->buttonNuskaityti->UseVisualStyleBackColor = true;
-			this->buttonNuskaityti->Click += gcnew System::EventHandler(this, &Pagrindinis::PagrindineForma::OnNuskaitytiClick);
+			this->buttonNuskaityti->Click += gcnew System::EventHandler(this, &PagrindineForma::OnNuskaitytiClick);
 			// 
 			// groupSkaiciavimai
 			// 
@@ -152,6 +162,7 @@ namespace Pagrindinis {
 			this->groupRezultatai->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
 				| System::Windows::Forms::AnchorStyles::Left)
 				| System::Windows::Forms::AnchorStyles::Right));
+			this->groupRezultatai->Controls->Add(this->buttonPreview);
 			this->groupRezultatai->Controls->Add(this->textRezultatuFailas);
 			this->groupRezultatai->Controls->Add(this->buttonSpausdinti);
 			this->groupRezultatai->Location = System::Drawing::Point(12, 220);
@@ -160,6 +171,30 @@ namespace Pagrindinis {
 			this->groupRezultatai->TabIndex = 6;
 			this->groupRezultatai->TabStop = false;
 			this->groupRezultatai->Text = L"Rezultatai";
+			// 
+			// buttonEdit
+			// 
+			this->buttonEdit->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->buttonEdit->Location = System::Drawing::Point(156, 44);
+			this->buttonEdit->Name = L"buttonEdit";
+			this->buttonEdit->Size = System::Drawing::Size(101, 23);
+			this->buttonEdit->TabIndex = 2;
+			this->buttonEdit->Text = L"Keisti Duomenis";
+			this->buttonEdit->UseVisualStyleBackColor = true;
+			this->buttonEdit->Click += gcnew System::EventHandler(this, &Pagrindinis::PagrindineForma::OnEditClick);
+			// 
+			// buttonPreview
+			// 
+			this->buttonPreview->Anchor = static_cast<System::Windows::Forms::AnchorStyles>(((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->buttonPreview->Location = System::Drawing::Point(156, 45);
+			this->buttonPreview->Name = L"buttonPreview";
+			this->buttonPreview->Size = System::Drawing::Size(101, 23);
+			this->buttonPreview->TabIndex = 3;
+			this->buttonPreview->Text = L"Perþiûrëti";
+			this->buttonPreview->UseVisualStyleBackColor = true;
+			this->buttonPreview->Click += gcnew System::EventHandler(this, &Pagrindinis::PagrindineForma::OnPreviewClick);
 			// 
 			// PagrindineForma
 			// 
@@ -190,6 +225,11 @@ namespace Pagrindinis {
 		void InitializeSettings();
 
 		void Nuskaityti();
-	};
+		void OnEditClick(System::Object ^sender, System::EventArgs ^e);
+		void OnPreviewClick(System::Object ^sender, System::EventArgs ^e);
+};
 }
+
+
+
 

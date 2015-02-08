@@ -43,6 +43,23 @@ void Pagrindinis::PagrindineForma::OnRezultatuFailasLeave(System::Object ^sender
 }
 #pragma endregion
 
+
+#pragma region Edit Methods
+
+void Pagrindinis::PagrindineForma::OnEditClick(System::Object ^sender, System::EventArgs ^e)
+{
+	txtEditor ed(StringToStd(this->textDuomenuFailas->Text), true);
+	ed.ShowDialog();
+}
+
+
+void Pagrindinis::PagrindineForma::OnPreviewClick(System::Object ^sender, System::EventArgs ^e)
+{
+	txtEditor ed(StringToStd(this->textRezultatuFailas->Text), false);
+	ed.ShowDialog();
+}
+#pragma endregion
+
 /* Duomenø nuskaitymas ðiame regione
 Pakeisti -> funkcijos Nuskaityti() argumentus pagal poreiká
 			funkcijos Nuskaityti() turiná*/

@@ -74,6 +74,7 @@
     <ClCompile Include="Entry.cpp" />
     <ClCompile Include="GUIEssentials.cpp" />
     <ClCompile Include="MyProgram.cpp" />
+    <ClCompile Include="txtEditor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -87,10 +88,16 @@
     <ClInclude Include="MyProgram.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="txtEditor.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyProgram.resx">
       <DependentUpon>MyProgram.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="txtEditor.resx">
+      <DependentUpon>txtEditor.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
