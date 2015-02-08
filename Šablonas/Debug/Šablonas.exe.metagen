@@ -1,0 +1,39 @@
+  Šablonas.MyProgram.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly Šablonas, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class GUIEssentials.Settings: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    LoadFile(String): PrivateScope, Public, Static, HideBySig
+    SaveCurrent(): PrivateScope, Public, Static, HideBySig
+    TryGetInt(String): PrivateScope, Public, Static, HideBySig
+    TryGetFloat(String): PrivateScope, Public, Static, HideBySig
+    TryGetString(String): PrivateScope, Public, Static, HideBySig
+    SetValue(String, String): PrivateScope, Public, Static, HideBySig
+    HasKey(String): PrivateScope, Public, Static, HideBySig
+    GetKeys(): PrivateScope, Public, Static, HideBySig
+    GetValues(): PrivateScope, Public, Static, HideBySig
+    isSaved(): PrivateScope, Public, Static, HideBySig
+Class GUIEssentials.MessageShow: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Show(String, String, MessageBoxButtons): PrivateScope, Public, Static, HideBySig
+    Show(String, String): PrivateScope, Public, Static, HideBySig
+    Show(String): PrivateScope, Public, Static, HideBySig
+    Show(String, String, MessageBoxButtons, MessageBoxIcon): PrivateScope, Public, Static, HideBySig
+Class Pagrindinis.PagrindineForma: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
